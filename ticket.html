@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>🎟️ Ticket de salida — Suelo Sustentable</title>
+  <link rel="stylesheet" href="assets/css/styles.css"/>
+  <script src="assets/js/config.js"></script>
+  <script defer src="assets/js/main.js"></script>
+  <script defer src="assets/js/accessibility.js"></script>
+  <style>
+    main{max-width:900px;margin:16px auto;padding:0 16px}
+    form .card{margin-bottom:16px}
+    .q{margin:8px 0}
+    label{display:block; margin:8px 0; color:#e5e7eb}
+    input[type="text"], input[type="email"], textarea{
+      width:100%; padding:10px; border-radius:12px; border:1px solid rgba(255,255,255,0.1);
+      background:#0f172a; color:#e5e7eb;
+    }
+  </style>
+</head>
+<body>
+  <header class="site">
+    <div class="wrap">
+      <div class="brand">
+        <div class="logo">🌱</div>
+        <div>Ticket de salida — Suelo Sustentable</div>
+      </div>
+      <nav>
+        <a class="pill" href="index.html">🏠 Inicio</a>
+        <a class="pill" href="viewer.html#3d">👁️ 3D</a>
+        <a class="pill" href="viewer.html#ar">📱 AR</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <form class="card" data-app-form data-title="Ticket de salida Suelo Sustentable">
+      <h1>🎟️ Ticket de salida</h1>
+      <p>Antes de terminar, responde brevemente:</p>
+
+      <div class="q">
+        <label>1) Hoy aprendí que el suelo sustentable es importante porque...</label>
+        <textarea name="t1" rows="3" required></textarea>
+      </div>
+
+      <div class="q">
+        <label>2) Una práctica que puedo aplicar en el invernadero/colegio es...</label>
+        <textarea name="t2" rows="3" required></textarea>
+      </div>
+
+      <div class="q">
+        <label>Tu nombre y curso</label>
+        <input type="text" name="estudiante" placeholder="Nombre Apellido — 1° Medio A" required/>
+      </div>
+
+      <div class="q">
+        <label>Correo institucional</label>
+        <input type="email" name="correo" placeholder="nombre.apellido@liceosannicolas.cl" required/>
+      </div>
+
+      <div class="buttons">
+        <button class="btn" type="submit">Enviar ticket</button>
+      </div>
+    </form>
+  </main>
+</body>
+</html>

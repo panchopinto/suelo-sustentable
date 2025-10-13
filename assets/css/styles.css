@@ -1,0 +1,105 @@
+:root{
+  --bg:#0d1117;
+  --card:#111827;
+  --muted:#6b7280;
+  --text:#e5e7eb;
+  --accent:#22d3ee; /* cyan */
+  --accent2:#a78bfa; /* violet */
+  --accent3:#34d399; /* emerald */
+  --btn-radius: 16px;
+  --base-scale: 1;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+html{font-size:16px}
+body{
+  margin:0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Noto Sans", "Helvetica Neue", Arial, "Apple Color Emoji","Segoe UI Emoji";
+  background: radial-gradient(1200px 800px at 10% -10%, rgba(34,211,238,0.08), transparent 60%), 
+              radial-gradient(1200px 800px at 90% 10%, rgba(167,139,250,0.08), transparent 60%), 
+              var(--bg);
+  color:var(--text);
+  transform: scale(var(--base-scale));
+  transform-origin: top left;
+}
+
+header.site{
+  position:sticky; top:0; z-index:50;
+  backdrop-filter: blur(8px);
+  background: rgba(13,17,23,0.7);
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+header .wrap{
+  max-width:1100px; margin:0 auto; padding:12px 16px;
+  display:flex; align-items:center; gap:12px; justify-content:space-between;
+}
+.brand{display:flex; align-items:center; gap:12px; font-weight:700}
+.brand .logo{width:40px; height:40px; border-radius:12px; background: linear-gradient(135deg,var(--accent),var(--accent2)); display:grid; place-items:center; font-size:22px}
+nav .pill{
+  display:inline-flex; gap:10px; align-items:center; padding:10px 14px; border-radius:999px;
+  background: rgba(255,255,255,0.06);
+  border:1px solid rgba(255,255,255,0.08);
+  font-size:14px; color:#cbd5e1; text-decoration:none;
+}
+nav .pill:hover{background:rgba(255,255,255,0.12)}
+
+.banner{
+  max-width:1100px; margin:24px auto; padding:16px;
+  display:grid; gap:16px; grid-template-columns: 1.4fr 1fr;
+}
+.card{
+  background: var(--card);
+  border:1px solid rgba(255,255,255,0.06);
+  border-radius:20px; padding:20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+}
+h1,h2,h3{margin:0 0 10px}
+p{color:#cbd5e1; line-height:1.5;}
+
+.buttons{display:flex; gap:12px; flex-wrap:wrap; margin-top:12px}
+.btn{
+  --from: var(--accent);
+  --to: var(--accent2);
+  background: linear-gradient(135deg, var(--from), var(--to));
+  color:#0b1021; font-weight:700;
+  border:none; border-radius: var(--btn-radius);
+  padding:12px 16px; cursor:pointer; text-decoration:none;
+  display:inline-flex; align-items:center; gap:10px; font-size:16px;
+  box-shadow: 0 6px 18px rgba(34,211,238,0.25);
+}
+.btn:hover{filter:brightness(1.05)}
+.btn--ar{ --from: var(--accent3); --to: var(--accent); box-shadow:0 6px 18px rgba(52,211,153,0.25)}
+.badge{display:inline-block; font-size:12px; color:#9ca3af; border:1px dashed #374151; padding:6px 10px; border-radius:999px}
+
+.grid{
+  display:grid; gap:16px; grid-template-columns: repeat(3, 1fr);
+  max-width:1100px; margin:0 auto 24px; padding:0 16px;
+}
+.grid .card h3{margin-bottom:6px}
+ul{margin: 0 0 0 18px}
+footer.site{
+  text-align:center; padding:24px 16px; color:#9ca3af; font-size:14px
+}
+
+#access-controls{
+  position: fixed; bottom:16px; left:16px; right:16px; z-index:100;
+  display:flex; justify-content:center;
+}
+#access-controls .container{
+  display:inline-flex; gap:8px; align-items:center; padding:10px 12px; border-radius:999px;
+  background: rgba(0,0,0,0.55); border:1px solid rgba(255,255,255,0.08);
+}
+#access-controls .label{font-size:13px; color:#e5e7eb; margin-right:4px}
+#access-controls .ctrl{
+  background:transparent; border:1px solid rgba(255,255,255,0.2); color:#e5e7eb;
+  border-radius:999px; padding:6px 10px; cursor:pointer;
+}
+.high-contrast, .high-contrast *{ color:black !important; background: #ffff00 !important; stroke: black !important; }
+.focus-ring *:focus{ outline: 3px dashed #f59e0b !important; outline-offset: 3px !important; }
+
+/* Responsive */
+@media (max-width: 900px){
+  .banner{grid-template-columns: 1fr}
+  .grid{grid-template-columns: 1fr}
+}

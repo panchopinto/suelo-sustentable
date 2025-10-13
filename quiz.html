@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>🧪 Quiz — Suelo Sustentable</title>
+  <link rel="stylesheet" href="assets/css/styles.css"/>
+  <script src="assets/js/config.js"></script>
+  <script defer src="assets/js/main.js"></script>
+  <script defer src="assets/js/accessibility.js"></script>
+  <style>
+    main{max-width:900px;margin:16px auto;padding:0 16px}
+    form .card{margin-bottom:16px}
+    .q{margin:8px 0}
+    label{display:block; margin:8px 0; color:#e5e7eb}
+    input[type="text"], input[type="email"], textarea, select{
+      width:100%; padding:10px; border-radius:12px; border:1px solid rgba(255,255,255,0.1);
+      background:#0f172a; color:#e5e7eb;
+    }
+  </style>
+</head>
+<body>
+  <header class="site">
+    <div class="wrap">
+      <div class="brand">
+        <div class="logo">🌱</div>
+        <div>Quiz — Suelo Sustentable</div>
+      </div>
+      <nav>
+        <a class="pill" href="index.html">🏠 Inicio</a>
+        <a class="pill" href="viewer.html#3d">👁️ 3D</a>
+        <a class="pill" href="viewer.html#ar">📱 AR</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <form class="card" data-app-form data-title="Quiz Suelo Sustentable">
+      <h1>🧪 Quiz</h1>
+      <p>Responde las siguientes preguntas. Al final ingresa tu nombre y correo institucional para registrar tus respuestas.</p>
+
+      <div class="q">
+        <label>1) ¿Qué práctica <strong>NO</strong> mejora la salud del suelo?</label>
+        <label><input type="radio" name="q1" value="A) Monocultivo continuo"> A) Monocultivo continuo</label>
+        <label><input type="radio" name="q1" value="B) Rotación de cultivos"> B) Rotación de cultivos</label>
+        <label><input type="radio" name="q1" value="C) Compostaje"> C) Compostaje</label>
+      </div>
+
+      <div class="q">
+        <label>2) La cobertura vegetal ayuda a...</label>
+        <label><input type="radio" name="q2" value="A) Aumentar la erosión"> A) Aumentar la erosión</label>
+        <label><input type="radio" name="q2" value="B) Reducir escorrentía y conservar humedad"> B) Reducir escorrentía y conservar humedad</label>
+        <label><input type="radio" name="q2" value="C) Eliminar la materia orgánica"> C) Eliminar la materia orgánica</label>
+      </div>
+
+      <div class="q">
+        <label>3) Menciona un indicador de calidad de suelo que puedas medir en el invernadero (ej.: pH, humedad…)</label>
+        <input type="text" name="q3" required/>
+      </div>
+
+      <div class="q">
+        <label>Tu nombre y curso</label>
+        <input type="text" name="estudiante" placeholder="Nombre Apellido — 1° Medio A" required/>
+      </div>
+
+      <div class="q">
+        <label>Correo institucional</label>
+        <input type="email" name="correo" placeholder="nombre.apellido@liceosannicolas.cl" required/>
+      </div>
+
+      <div class="buttons">
+        <button class="btn" type="submit">Enviar respuestas</button>
+      </div>
+    </form>
+  </main>
+</body>
+</html>
